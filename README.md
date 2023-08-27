@@ -40,9 +40,9 @@ Macros like: `->as`, `->as-when-let` and `->when-let` can increase readability b
 ```
 
 where:
-- `->when-let` is a when-let-like expression that fits in -> expressions
-- `->when-let-as` is a value broken out, when-let-like expressions that first in -> expressions
--  `->as` is a value broken out expression that fits in -> expressions
+- [`->when-let`](#-when-let-value-test-binding--then-form) is a when-let-like expression that fits in -> expressions
+- [`->when-let-as`](arrowish#-as-when-let-value-name-test-binding--then-form) is a value broken out, when-let-like expressions that first in -> expressions
+-  [`->as`](#-as-value-name--form) is a value broken out expression that fits in -> expressions
 
 ## `->when-let [value test-binding & then-form]`
 
