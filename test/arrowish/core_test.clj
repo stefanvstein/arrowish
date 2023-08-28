@@ -2,17 +2,10 @@
   (:require [clojure.test :refer [deftest is testing]]
             [arrowish.core :refer [->as ->when-let ->as-when-let ->>as ->>when-let ->>as-when-let]]))
 
-;; These threading expression are more difficult than necesary to read
+
 (deftest example
   (testing 
-      "Threading expressions are good to make code easier to understand,
-       by rearangeing the order of appearence. Sometimes it is tempting
-       to use anonymous functions and sometimes it is tempting to embed
-       some conditionality. Naturally you do this in stand alone functions,
-       but sometimes there is an urge to express details inline.
-       Threading expression is there to increase clarity, in first place.
-
-       These threading expression are more difficult than necesary to read"
+      "Hard to read expression"
 
       (let [thing (atom 0)
             outer {:y 3}]
@@ -27,7 +20,7 @@
                (is (= {:a 1 :b 5}
                       item)))))))
   
-  (testing "These macros are here to increase the readbility"
+  (testing "Easier to read expression"
     (let [thing (atom 0)
           outer {:y 3}]
       (-> {:a 1 :b 2}
@@ -44,7 +37,7 @@
 (deftest explain->as
 
   (testing
-   "->as is used to bind a name to the passed in a -> expression 
+      "->as is used to bind a name to the passed in a -> expression 
 
        1 bound to x, which can be used in the succeding implicit do.
        The result of the implicit do form is passed along in the ->
